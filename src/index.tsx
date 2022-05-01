@@ -19,7 +19,7 @@ export type MinecraftSkinViewerProps = {
   walk: boolean
   rotate: boolean
   control: boolean
-  background: string
+  background: String
 } & typeof defaultProps
 
 export const MinecraftSkinViewer = ({
@@ -45,9 +45,10 @@ export const MinecraftSkinViewer = ({
     let viewerControl: any
 
     if (background === 'transparent') {
-      viewerControl.background = 0x000000
+      skinViewer.renderer.setClearColor(0xffffff, 0)
     } else {
-      viewerControl.background = background
+      // @ts-ignore
+      skinViewer.background = background
     }
 
     if (control) {
