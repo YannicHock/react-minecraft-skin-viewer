@@ -1,12 +1,12 @@
 {
-  "name": "@wiicamp/react-minecraft-skin-viewer",
+  "name": "@yannichock/react-minecraft-skin-viewer",
   "version": "1.0.6",
   "description": "Minecraft skin viewer for ReactJS",
-  "author": "lampn9397",
+  "author": "lampn9397, wiicamp, yannichock",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wiicamp/react-minecraft-skin-viewer.git"
+    "url": "git+https://github.com/YannicHock/react-minecraft-skin-viewer.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
@@ -68,9 +68,9 @@
   },
   "types": "./dist/index.d.ts",
   "bugs": {
-    "url": "https://github.com/wiicamp/react-minecraft-skin-viewer/issues"
+    "url": "https://github.com/YannicHock/react-minecraft-skin-viewer/issues"
   },
-  "homepage": "https://github.com/wiicamp/react-minecraft-skin-viewer#readme",
+  "homepage": "https://github.com/YannicHock/react-minecraft-skin-viewer#readme",
   "directories": {
     "example": "example"
   },
