@@ -44,7 +44,9 @@ export const MinecraftSkinViewer = ({
     // View control
     let viewerControl: any
 
-    if (background !== 'transparent') {
+    if (background === 'transparent') {
+      viewerControl.background = 0x000000
+    } else {
       viewerControl.background = background
     }
 
