@@ -1,13 +1,13 @@
-# @wiicamp/react-minecraft-skin-viewer
+# @yannichock/react-minecraft-skin-viewer
 
-> Minecraft skin viewer for ReactJS
+> Minecraft skin viewer for ReactJS based on the work of [lampn9397](https://github.com/lampn9397) and [wiicamp](https://github.com/wiicamp)
 
 [![NPM](https://img.shields.io/npm/v/@wiicamp/react-minecraft-skin-viewer.svg)](https://www.npmjs.com/package/@wiicamp/react-minecraft-skin-viewer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save @wiicamp/react-minecraft-skin-viewer
+npm install --save @yannichock/react-minecraft-skin-viewer
 ```
 
 ## Usage

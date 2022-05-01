@@ -1,9 +1,15 @@
 import React from 'react'
-import { SkinViewer, createOrbitControls, WalkingAnimation } from 'skinview3d'
+import {
+  SkinViewer,
+  createOrbitControls,
+  WalkingAnimation,
+  RotatingAnimation
+} from 'skinview3d'
 
 export const defaultProps = {
   walk: false,
-  control: true
+  control: true,
+  rotate: false
 }
 
 export type MinecraftSkinViewerProps = {
@@ -11,6 +17,7 @@ export type MinecraftSkinViewerProps = {
   width: number
   height: number
   walk: boolean
+  rotate: boolean
   control: boolean
   background: string
 } & typeof defaultProps
@@ -20,6 +27,7 @@ export const MinecraftSkinViewer = ({
   width,
   height,
   walk,
+  rotate,
   control,
   background
 }: MinecraftSkinViewerProps) => {
@@ -30,12 +38,15 @@ export const MinecraftSkinViewer = ({
       skin,
       width,
       height,
-      background,
       canvas: canvas.current as HTMLCanvasElement
     })
 
     // View control
     let viewerControl: any
+
+    if (background !== 'transparent') {
+      viewerControl.background = background
+    }
 
     if (control) {
       viewerControl = createOrbitControls(skinViewer)
@@ -47,6 +58,9 @@ export const MinecraftSkinViewer = ({
     // Animations
     if (walk) {
       skinViewer.animations.add(WalkingAnimation)
+    }
+    if (rotate) {
+      skinViewer.animations.add(RotatingAnimation)
     }
     // const rotate = skinViewer.animations.add(skinview3d.RotatingAnimation);
     // const run = skinViewer.animations.add(skinview3d.RunningAnimation);
