@@ -19,6 +19,7 @@ export type MinecraftSkinViewerProps = {
   walk: boolean
   rotate: boolean
   control: boolean
+  zoom: boolean
   background: String
 } & typeof defaultProps
 
@@ -29,6 +30,7 @@ export const MinecraftSkinViewer = ({
   walk,
   rotate,
   control,
+  zoom,
   background
 }: MinecraftSkinViewerProps) => {
   const canvas = React.useRef<HTMLCanvasElement>(null)
@@ -54,7 +56,7 @@ export const MinecraftSkinViewer = ({
     if (control) {
       viewerControl = createOrbitControls(skinViewer)
       viewerControl.enablePan = false
-      viewerControl.enableZoom = true
+      viewerControl.enableZoom = zoom
       viewerControl.enableRotate = true
     }
 
